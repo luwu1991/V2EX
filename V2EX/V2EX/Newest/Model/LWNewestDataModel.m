@@ -22,6 +22,7 @@
 
 -(NSString *)description{
     [super description];
+    NSLog(@"=========");
     NSLog(@"memberID:%ld",self.memberID);
     NSLog(@"title:%@",self.title);
     NSLog(@"url:%@",self.url);
