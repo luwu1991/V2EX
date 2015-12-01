@@ -24,7 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"类别";
+    
     self.itemArray = [NSMutableArray array];
+    self.listTableView.frame = CGRectMake(0, 108, self.view.width, self.view.height - 152);
     self.classilyArray = [NSMutableArray arrayWithArray:@[@"技术",@"创意",@"好玩",@"Apple",@"酷工作",@"交易",@"城市",@"问与答",@"最热",@"全部",@"R2"]];
     self.classilyDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                          @"tech",@"技术",
@@ -44,6 +46,7 @@
 //    self.listTableView.estimatedRowHeight = 80;
     self.listTableView.rowHeight = 90;
     [self.view addSubview:self.listTableView];
+//    [self.listTableView removeFromSuperview];
     [self loadDataFromWeb];
     // Do any additional setup after loading the view.
 }

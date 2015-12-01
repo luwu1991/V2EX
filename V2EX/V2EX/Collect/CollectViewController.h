@@ -9,5 +9,5 @@
 #import "BaseViewController.h"
 
 @interface CollectViewController : BaseViewController
-
+@property(nonatomic,copy)NSArray *itemArray;
 @end
