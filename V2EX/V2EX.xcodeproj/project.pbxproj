@@ -508,6 +508,7 @@
 				TargetAttributes = {
 					B28D4D911B9A71EA00379908 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = N9BRUAUWNH;
 					};
 					B28D4DAA1B9A71EA00379908 = {
 						CreatedOnToolsVersion = 6.4;
@@ -757,6 +758,8 @@
 			baseConfigurationReference = CAB478CBD3A1972C4B6C607B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/V2EX/Supporting Files/pchFile.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -766,8 +769,11 @@
 					"\"${SDK_DIR}\"/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = V2EX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "luwu-V2EX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -777,6 +783,8 @@
 			baseConfigurationReference = 6023FDD5DD800AB6173B7E76 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/V2EX/Supporting Files/pchFile.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -786,8 +794,11 @@
 					"\"${SDK_DIR}\"/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = V2EX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "luwu-V2EX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
