@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C9E757F5D2B80805CDBF8B5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 837BC6A3043A8A57A0CA098C /* libPods.a */; };
+		B23FC3E81C9A4AED00C37431 /* LWCatergoryViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B23FC3E71C9A4AED00C37431 /* LWCatergoryViewCellModel.m */; };
 		B24083371BFC9F6A009709A2 /* NewestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B24083351BFC9F6A009709A2 /* NewestTableViewCell.m */; };
 		B24083381BFC9F6A009709A2 /* NewestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B24083361BFC9F6A009709A2 /* NewestTableViewCell.xib */; };
 		B27A61D51BB652F7007F278B /* beijin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B27A61D41BB652F7007F278B /* beijin@2x.png */; };
@@ -52,6 +53,8 @@
 		B2B131611BFB538100DDD615 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B1315E1BFB538100DDD615 /* YYClassInfo.m */; };
 		B2B131641BFB5CC300DDD615 /* LWNewestDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B131631BFB5CC300DDD615 /* LWNewestDataModel.m */; };
 		B2CC98631BFA17940068922C /* NodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CC98621BFA17940068922C /* NodeModel.m */; };
+		B2EDE9331C99080200DBD4A2 /* LWCatergoryViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EDE9321C99080200DBD4A2 /* LWCatergoryViewLayout.m */; };
+		B2EDE9371C9909A000DBD4A2 /* LWCatergoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EDE9361C9909A000DBD4A2 /* LWCatergoryViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,8 @@
 /* Begin PBXFileReference section */
 		6023FDD5DD800AB6173B7E76 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		837BC6A3043A8A57A0CA098C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B23FC3E61C9A4AED00C37431 /* LWCatergoryViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWCatergoryViewCellModel.h; sourceTree = "<group>"; };
+		B23FC3E71C9A4AED00C37431 /* LWCatergoryViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWCatergoryViewCellModel.m; sourceTree = "<group>"; };
 		B24083341BFC9F6A009709A2 /* NewestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewestTableViewCell.h; sourceTree = "<group>"; };
 		B24083351BFC9F6A009709A2 /* NewestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewestTableViewCell.m; sourceTree = "<group>"; };
 		B24083361BFC9F6A009709A2 /* NewestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewestTableViewCell.xib; sourceTree = "<group>"; };
@@ -146,6 +151,10 @@
 		B2B131631BFB5CC300DDD615 /* LWNewestDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWNewestDataModel.m; sourceTree = "<group>"; };
 		B2CC98611BFA17940068922C /* NodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModel.h; sourceTree = "<group>"; };
 		B2CC98621BFA17940068922C /* NodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModel.m; sourceTree = "<group>"; };
+		B2EDE9311C99080200DBD4A2 /* LWCatergoryViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWCatergoryViewLayout.h; sourceTree = "<group>"; };
+		B2EDE9321C99080200DBD4A2 /* LWCatergoryViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWCatergoryViewLayout.m; sourceTree = "<group>"; };
+		B2EDE9351C9909A000DBD4A2 /* LWCatergoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWCatergoryViewCell.h; sourceTree = "<group>"; };
+		B2EDE9361C9909A000DBD4A2 /* LWCatergoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWCatergoryViewCell.m; sourceTree = "<group>"; };
 		CAB478CBD3A1972C4B6C607B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +178,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B23FC3E51C9A4AC300C37431 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B23FC3E61C9A4AED00C37431 /* LWCatergoryViewCellModel.h */,
+				B23FC3E71C9A4AED00C37431 /* LWCatergoryViewCellModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B24083331BFC9F4C009709A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +417,9 @@
 		B2A433821BFA09FB003BD768 /* Classify */ = {
 			isa = PBXGroup;
 			children = (
+				B23FC3E51C9A4AC300C37431 /* Model */,
+				B2EDE9341C99094B00DBD4A2 /* View */,
+				B2EDE92D1C98FE5600DBD4A2 /* LWCatergoryViewLayout */,
 				B2A4338C1BFA0A6B003BD768 /* ClasslfyViewController.h */,
 				B2A4338D1BFA0A6B003BD768 /* ClasslfyViewController.m */,
 			);
@@ -439,6 +460,24 @@
 			path = YYModel;
 			sourceTree = "<group>";
 		};
+		B2EDE92D1C98FE5600DBD4A2 /* LWCatergoryViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				B2EDE9311C99080200DBD4A2 /* LWCatergoryViewLayout.h */,
+				B2EDE9321C99080200DBD4A2 /* LWCatergoryViewLayout.m */,
+			);
+			path = LWCatergoryViewLayout;
+			sourceTree = "<group>";
+		};
+		B2EDE9341C99094B00DBD4A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2EDE9351C9909A000DBD4A2 /* LWCatergoryViewCell.h */,
+				B2EDE9361C9909A000DBD4A2 /* LWCatergoryViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C6E58AF03BA3F85AD1400BEF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,6 +508,7 @@
 				B28D4D8F1B9A71EA00379908 /* Frameworks */,
 				B28D4D901B9A71EA00379908 /* Resources */,
 				869637FB5B35FB29309C40FF /* Copy Pods Resources */,
+				22B0FE0EB379F428FC4517EE /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -565,6 +605,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		22B0FE0EB379F428FC4517EE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		869637FB5B35FB29309C40FF /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -624,6 +679,7 @@
 				B28CB7A11BB786B30026DB69 /* MBProgressHUD+WJTools.m in Sources */,
 				B2A433961BFA13F8003BD768 /* MemberModel.m in Sources */,
 				B28D4D981B9A71EA00379908 /* main.m in Sources */,
+				B23FC3E81C9A4AED00C37431 /* LWCatergoryViewCellModel.m in Sources */,
 				B28CB7A81BB786F60026DB69 /* AFNetworkTool.m in Sources */,
 				B28F76121BF828680011A019 /* HTMLNode.m in Sources */,
 				B28CB79E1BB786A70026DB69 /* NSString+URLEncoding.m in Sources */,
@@ -631,6 +687,8 @@
 				B2B131601BFB538100DDD615 /* NSObject+YYModel.m in Sources */,
 				B2A4338E1BFA0A6B003BD768 /* ClasslfyViewController.m in Sources */,
 				B2894AF11BB62BAA00F5973B /* LoginViewController.m in Sources */,
+				B2EDE9331C99080200DBD4A2 /* LWCatergoryViewLayout.m in Sources */,
+				B2EDE9371C9909A000DBD4A2 /* LWCatergoryViewCell.m in Sources */,
 				B2A433881BFA0A4B003BD768 /* MeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

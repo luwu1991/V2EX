@@ -40,10 +40,12 @@
     self.page_size = 10;
     self.itemArray = [NSMutableArray array];
 //    [self loadDataFromWeb];
-    [self geiThemeDetailData];
-    
+//    [self geiThemeDetailData];
+
     // Do any additional setup after loading the view.
 }
+
+
 -(void)refreshView{
     WeakSelf;
     [self.listTableView addLegendHeaderWithRefreshingBlock:^{

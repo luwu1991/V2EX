@@ -1,0 +1,2 @@
+/Users/wulu/Library/Developer/Xcode/DerivedData/V2EX-gntsvazpxqiyuecphomhsfzxfjna/Build/Products/Debug-iphonesimulator/V2EX.app
+iPhone Developer
