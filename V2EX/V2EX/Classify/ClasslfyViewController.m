@@ -30,7 +30,7 @@ static NSString *LWCatergoryViewCellID = @"LWCatergoryViewCell";
 @property (strong, nonatomic) UICollectionView  *categoryView;
 @property (strong, nonatomic) NSIndexPath  *selectIndexPath;
 @property(nonatomic,strong)NSMutableArray *modelArray;
-
+@property (strong, nonatomic) NSMutableDictionary  *itemArrayDict;
 @end
 
 @implementation ClasslfyViewController
@@ -84,6 +84,7 @@ static NSString *LWCatergoryViewCellID = @"LWCatergoryViewCell";
     [super viewDidLoad];
     self.title = @"类别";
     
+    self.itemArrayDict = [NSMutableDictionary dictionary];
     self.itemArray = [NSMutableArray array];
     self.automaticallyAdjustsScrollViewInsets = false;
 //    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStylePlain];
@@ -112,7 +113,7 @@ static NSString *LWCatergoryViewCellID = @"LWCatergoryViewCell";
     [self categoryView];
     [self collectionView];
     [self setTableVIeWithTag];
-    [self loadDataFromWeb];
+    [self loadDataFromWebWith:V2ClassilyTypeTech];
     
     
    
@@ -147,19 +148,23 @@ static NSString *LWCatergoryViewCellID = @"LWCatergoryViewCell";
     return tableView;
 }
 
--(void)loadDataFromWeb{
-    [[LWHTTPManager shareManager]GetClassilyDataWith:V2ClassilyTypeJobs success:^(id data) {
-        if (data) {
-            self.itemArray = data;
-            [self.collectionView reloadData];
-        }
-        else{
-            [self showHint:@"没有数据"];
-        }
-    } failure:^(NSError *error) {
-        NSLog(@"%@",error.description);
-        [self showHint:error.description];
-    }];
+-(void)loadDataFromWebWith:(V2ClassilyType)V2classily{
+     if (![self.itemArrayDict.allKeys containsObject:[NSNumber numberWithInteger:V2classily]])
+     {
+        [[LWHTTPManager shareManager]GetClassilyDataWith:V2classily success:^(id data) {
+            if (data) {
+                self.itemArrayDict[[NSNumber numberWithInteger:V2classily]] = data;
+                [self.collectionView reloadData];
+            }
+            else{
+                [self showHint:@"没有数据"];
+            }
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error.description);
+            [self showHint:error.description];
+        }];
+     }
+
 }
 #pragma mark --UITableView的代理
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -168,7 +173,12 @@ static NSString *LWCatergoryViewCellID = @"LWCatergoryViewCell";
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return self.itemArray.count;
+    if ([self.itemArrayDict.allKeys containsObject:[NSNumber numberWithInteger:self.selectIndexPath.row]]) {
+        self.itemArray = self.itemArrayDict[[NSNumber numberWithInteger:self.selectIndexPath.row]];
+        
+        return self.itemArray.count;
+    }
+    return 0;
     
 }
 
@@ -284,6 +294,8 @@ static NSString *LWCatergoryViewCellID = @"LWCatergoryViewCell";
     CGFloat ratio = self.collectionView.contentOffset.x / self.collectionView.width;
     if (ratio == (int)ratio) {
         self.selectIndexPath = [NSIndexPath indexPathForRow:(int)ratio inSection:0];
+        [self.tableView reloadData];
+        [self loadDataFromWebWith:(int)ratio];
         [self.categoryView scrollToItemAtIndexPath:self.selectIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
         NSLog(@"self.select ---- %f",ratio);
         [self updateCells];

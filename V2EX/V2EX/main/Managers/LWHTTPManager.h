@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger, LWRequestMethod) {
 
 typedef NS_ENUM (NSInteger, V2ClassilyType) {
     
-    V2ClassilyTypeTech,
+    V2ClassilyTypeTech = 0,
     V2ClassilyTypeCreative,
     V2ClassilyTypePlay,
     V2ClassilyTypeApple,

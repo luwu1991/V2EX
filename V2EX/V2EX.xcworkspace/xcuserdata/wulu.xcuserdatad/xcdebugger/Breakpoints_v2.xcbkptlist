@@ -32,7 +32,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "V2EX/Newest/NewestDateilViewController.m"
@@ -68,7 +68,7 @@
                   moduleName = "V2EX"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/wulu/V2EX/V2EX/V2EX/Newest/NewestDateilViewController.m"
-                  timestampString = "480242936.787813"
+                  timestampString = "480318305.691214"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "89"
@@ -83,7 +83,7 @@
                   moduleName = "V2EX"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/wulu/V2EX/V2EX/V2EX/Newest/NewestDateilViewController.m"
-                  timestampString = "480242936.788047"
+                  timestampString = "480318305.691451"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "89"
@@ -100,11 +100,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "V2EX/main/Managers/LWHTTPManager.m"
-            timestampString = "480306097.666525"
+            timestampString = "480318075.755974"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
             landmarkName = "-getTopicListFromResponseObject:"
             landmarkType = "5">
          </BreakpointContent>
@@ -116,11 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "V2EX/main/Managers/LWHTTPManager.m"
-            timestampString = "480306103.26795"
+            timestampString = "480318075.755974"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
+            startingLineNumber = "278"
+            endingLineNumber = "278"
             landmarkName = "-getTopicListFromResponseObject:"
             landmarkType = "5">
          </BreakpointContent>

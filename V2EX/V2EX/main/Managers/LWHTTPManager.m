@@ -68,6 +68,8 @@
         self.manager.responseSerializer = responseSerializer;
         task = [self.manager GET:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
             NSLog(@"%@",responseObject);
+            NSString *str = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+            NSLog(@"%@",str);
             responseHandleBlock(task,responseObject);
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
             LWLog(@"%@",[error description]);

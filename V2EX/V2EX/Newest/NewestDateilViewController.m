@@ -41,7 +41,7 @@
     self.itemArray = [NSMutableArray array];
     [self refreshView];
 //    [self loadDataFromWeb];
-//    [self geiThemeDetailData];
+    [self geiThemeDetailData];
 
     // Do any additional setup after loading the view.
 }
@@ -77,7 +77,7 @@
         if (data) {
             NSLog(@"%@",data.lastObject);
             self.theme = [LWNewestDataModel yy_modelWithJSON:data.lastObject];
-            [self refreshView];
+//            [self refreshView];
         }
     } failure:^(NSError *error) {
         [self showHint:error.description];
