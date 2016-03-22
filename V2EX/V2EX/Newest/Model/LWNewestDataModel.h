@@ -21,4 +21,5 @@
 @property(nonatomic,assign)NSInteger last_touched;
 @property(nonatomic,strong)MemberModel *member;
 @property(nonatomic,copy)NodeModel *node;
+@property (copy, nonatomic) NSString *createTime;
 @end

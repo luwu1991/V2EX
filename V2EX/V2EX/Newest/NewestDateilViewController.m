@@ -39,6 +39,7 @@
     self.page = 0;
     self.page_size = 10;
     self.itemArray = [NSMutableArray array];
+    [self refreshView];
 //    [self loadDataFromWeb];
 //    [self geiThemeDetailData];
 

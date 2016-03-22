@@ -195,7 +195,7 @@ static NSString *LWCatergoryViewCellID = @"LWCatergoryViewCell";
     else{
         cell.dateLabel.text = [NSString stringWithFormat:@"%d天前",(int)time/86400];
     }
-    
+    cell.dateLabel.text = model.createTime;
     cell.classifyLabel.text = model.node.title;
     [cell.classifyLabel sizeToFit];
     cell.authorLabel.text = model.member.username;

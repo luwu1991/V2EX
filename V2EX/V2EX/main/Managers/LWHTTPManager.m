@@ -54,6 +54,7 @@
         AFHTTPResponseSerializer *responseSerializer = [AFHTTPResponseSerializer serializer];
         self.manager.responseSerializer = responseSerializer;
         task = [self.manager GET:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+            NSLog(@"%@",responseObject);
             responseHandleBlock(task,responseObject);
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
             LWLog(@"%@",[error description]);
@@ -66,6 +67,7 @@
         AFHTTPResponseSerializer *responseSerializer = [AFHTTPResponseSerializer serializer];
         self.manager.responseSerializer = responseSerializer;
         task = [self.manager GET:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+            NSLog(@"%@",responseObject);
             responseHandleBlock(task,responseObject);
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
             LWLog(@"%@",[error description]);
@@ -78,6 +80,7 @@
         AFHTTPResponseSerializer *responseSerializer = [AFHTTPResponseSerializer serializer];
         self.manager.responseSerializer = responseSerializer;
         task = [self.manager POST:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+            NSLog(@"%@",responseObject);
             responseHandleBlock(task, responseObject);
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
@@ -90,6 +93,7 @@
         self.manager.responseSerializer = responseSerializer;
 //        [self.manager.requestSerializer setValue:self.userAgentPC forHTTPHeaderField:@"User-Agent"];
         task = [self.manager GET:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+            NSLog(@"%@",responseObject);
             responseHandleBlock(task, responseObject);
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
@@ -279,8 +283,9 @@
                                     
                                 }
                             }
-                        }
-                        
+                            
+                    }
+                       
                         NSArray *spanNodes = [tdNode findChildTags:@"span"];
                         for (HTMLNode *spanNode in spanNodes) {
                             if ([spanNode.rawContents rangeOfString:@"href"].location == NSNotFound) {
@@ -293,33 +298,34 @@
                                 NSArray *components = [contentString componentsSeparatedByString:@"  •  "];
                                 NSString *dateString;
                                 
-                                if (components.count > 2) {
-                                    dateString = components[2];
+                                if (components.count >= 2) {
+                                    dateString = components[0];
                                 }
-//                                else {
-//                                    dateString = [contentString stringByReplacingOccurrencesOfRegex:@"  •  (.*?)$" withString:@""];
-//                                }
-                                
-                                NSArray *stringArray = [dateString componentsSeparatedByString:@" "];
-                                if (stringArray.count > 1) {
-                                    NSString *unitString = @"";
-                                    NSString *subString = [(NSString *)stringArray[1] substringToIndex:1];
-                                    if ([subString isEqualToString:@"分"]) {
-                                        unitString = @"分钟前";
-                                    }
-                                    if ([subString isEqualToString:@"小"]) {
-                                        unitString = @"小时前";
-                                    }
-                                    if ([subString isEqualToString:@"天"]) {
-                                        unitString = @"天前";
-                                    }
-                                    //                                    unitString = stringArray[1];
-                                    dateString = [NSString stringWithFormat:@"%@%@", stringArray[0], unitString];
-                                } else {
-                                    //                                    dateString = @"just now";
+                                else{
                                     dateString = @"刚刚";
                                 }
-                                model.created = [dateString integerValue];
+                                model.createTime = dateString;
+                                
+//                                NSArray *stringArray = [dateString componentsSeparatedByString:@" "];
+//                                if (stringArray.count > 1) {
+//                                    NSString *unitString = @"";
+//                                    NSString *subString = [(NSString *)stringArray[1] substringToIndex:1];
+//                                    if ([subString isEqualToString:@"分"]) {
+//                                        unitString = @"分钟前";
+//                                    }
+//                                    if ([subString isEqualToString:@"小"]) {
+//                                        unitString = @"小时前";
+//                                    }
+//                                    if ([subString isEqualToString:@"天"]) {
+//                                        unitString = @"天前";
+//                                    }
+//                                    //                                    unitString = stringArray[1];
+//                                    dateString = [NSString stringWithFormat:@"%@%@", stringArray[0], unitString];
+//                                } else {
+//                                    //                                    dateString = @"just now";
+//                                    dateString = @"刚刚";
+//                                }
+//                                model.created = [dateString integerValue];
                             }
                         }
                         
